@@ -1,0 +1,413 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Contact - Lac de Bret | Réservations et informations">
+	<Navigation />
+	<main>
+		<section class="page-hero contact-hero">
+			<div class="hero-background">
+				<img src="https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" alt="Restaurant du Lac de Bret" />
+				<div class="hero-overlay"></div>
+			</div>
+			<div class="container">
+				<div class="hero-content">
+					<h1 class="hero-title">Nous contacter</h1>
+					<p class="hero-subtitle">Réservez votre table ou contactez-nous pour plus d'informations</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section contact-details">
+			<div class="container">
+				<div class="contact-content">
+					<div class="contact-info">
+						<div class="contact-item">
+							<div class="contact-icon">📍</div>
+							<div class="contact-details">
+								<h3>Adresse</h3>
+								<p>Restaurant du Lac de Bret<br>Chemin du Lac de Bret 7<br>1070 Puidoux, Suisse</p>
+							</div>
+						</div>
+						
+						<div class="contact-item">
+							<div class="contact-icon">📞</div>
+							<div class="contact-details">
+								<h3>Téléphone</h3>
+								<p><a href="tel:+41219461126">+41 21 946 11 26</a></p>
+							</div>
+						</div>
+						
+						<div class="contact-item">
+							<div class="contact-icon">✉️</div>
+							<div class="contact-details">
+								<h3>Email</h3>
+								<p><a href="mailto:lacbret@lewin.ch">lacbret@lewin.ch</a></p>
+							</div>
+						</div>
+
+						<div class="contact-item">
+							<div class="contact-icon">🕒</div>
+							<div class="contact-details">
+								<h3>Horaires d'ouverture</h3>
+								<div class="hours">
+									<p><strong>Mardi - Dimanche :</strong> 11h30 - 14h00 / 18h30 - 22h00</p>
+									<p><strong>Lundi :</strong> Fermé</p>
+									<p><em>Terrasse ouverte d'avril à octobre selon météo</em></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="contact-form">
+						<h3>Envoyez-nous un message</h3>
+						<form>
+							<div class="form-row">
+								<div class="form-group">
+									<label for="name">Nom complet *</label>
+									<input type="text" id="name" name="name" required>
+								</div>
+								
+								<div class="form-group">
+									<label for="email">Email *</label>
+									<input type="email" id="email" name="email" required>
+								</div>
+							</div>
+							
+							<div class="form-row">
+								<div class="form-group">
+									<label for="phone">Téléphone</label>
+									<input type="tel" id="phone" name="phone">
+								</div>
+								
+								<div class="form-group">
+									<label for="date">Date souhaitée</label>
+									<input type="date" id="date" name="date">
+								</div>
+							</div>
+							
+							<div class="form-row">
+								<div class="form-group">
+									<label for="guests">Nombre de personnes</label>
+									<select id="guests" name="guests">
+										<option value="">Sélectionnez</option>
+										<option value="1">1 personne</option>
+										<option value="2">2 personnes</option>
+										<option value="3">3 personnes</option>
+										<option value="4">4 personnes</option>
+										<option value="5">5 personnes</option>
+										<option value="6">6 personnes</option>
+										<option value="7">7 personnes</option>
+										<option value="8">8 personnes</option>
+										<option value="9+">9+ personnes</option>
+									</select>
+								</div>
+
+								<div class="form-group">
+									<label for="space">Espace préféré</label>
+									<select id="space" name="space">
+										<option value="">Sélectionnez</option>
+										<option value="restaurant">Salle principale</option>
+										<option value="terrasse">Terrasse (saison)</option>
+										<option value="jardin-hiver">Jardin d'hiver</option>
+										<option value="indifferent">Indifférent</option>
+									</select>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="message">Message</label>
+								<textarea id="message" name="message" rows="5" placeholder="Demande spéciale, allergies, événement particulier, demande de devis..."></textarea>
+							</div>
+							
+							<button type="submit" class="btn btn-primary">Envoyer le message</button>
+						</form>
+					</div>
+				</div>
+				
+				<div class="contact-map">
+					<h3>Notre emplacement</h3>
+					<div class="map-container">
+						<iframe 
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2747.8234567890123!2d6.8234567890123456!3d46.5234567890123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDbCsDMxJzI0LjQiTiA2wrA0OScyNC40IkU!5e0!3m2!1sfr!2sch!4v1234567890123"
+							width="100%" 
+							height="400" 
+							style="border:0; border-radius: 1rem;" 
+							allowfullscreen="" 
+							loading="lazy" 
+							referrerpolicy="no-referrer-when-downgrade"
+							title="Emplacement du Restaurant du Lac de Bret">
+						</iframe>
+					</div>
+				</div>
+
+				<div class="additional-info">
+					<div class="info-grid">
+						<div class="info-box">
+							<h4>🚗 Accès et parking</h4>
+							<p>Parking privé gratuit disponible. Accès facile depuis l'autoroute A9, sortie Puidoux-Chexbres.</p>
+						</div>
+						<div class="info-box">
+							<h4>🎉 Événements privés</h4>
+							<p>Nous organisons vos mariages, anniversaires et événements d'entreprise jusqu'à 200 personnes.</p>
+						</div>
+						<div class="info-box">
+							<h4>🍽️ Groupes</h4>
+							<p>Menus spéciaux pour groupes sur demande. Réservation obligatoire pour plus de 8 personnes.</p>
+						</div>
+						<div class="info-box">
+							<h4>♿ Accessibilité</h4>
+							<p>Restaurant accessible aux personnes à mobilité réduite. Toilettes adaptées disponibles.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	.page-hero {
+		position: relative;
+		height: 50vh;
+		min-height: 350px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		margin-top: 80px;
+	}
+
+	.hero-background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -2;
+	}
+
+	.hero-background img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+
+	.hero-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 100%);
+		z-index: -1;
+	}
+
+	.hero-content {
+		text-align: center;
+		color: var(--white);
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.hero-title {
+		font-size: 3rem;
+		font-weight: 700;
+		margin-bottom: 1rem;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+	}
+
+	.hero-subtitle {
+		font-size: 1.2rem;
+		opacity: 0.95;
+		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+	}
+
+	.contact-details {
+		background-color: var(--white);
+	}
+
+	.contact-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+		margin-bottom: 4rem;
+	}
+
+	.contact-info {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.contact-item {
+		display: flex;
+		align-items: flex-start;
+		gap: 1rem;
+		padding: 1.5rem;
+		background-color: var(--secondary-beige);
+		border-radius: 1rem;
+		box-shadow: var(--shadow);
+	}
+
+	.contact-icon {
+		font-size: 1.5rem;
+		margin-top: 0.25rem;
+	}
+
+	.contact-details h3 {
+		font-size: 1.1rem;
+		margin-bottom: 0.5rem;
+		color: var(--text-dark);
+	}
+
+	.contact-details p {
+		color: var(--text-light);
+		line-height: 1.6;
+	}
+
+	.contact-details a {
+		color: var(--primary-green);
+		text-decoration: none;
+		transition: color 0.3s ease;
+	}
+
+	.contact-details a:hover {
+		color: var(--accent-green);
+	}
+
+	.hours p {
+		margin-bottom: 0.5rem;
+	}
+
+	.contact-form {
+		background-color: var(--white);
+		padding: 2rem;
+		border-radius: 1rem;
+		box-shadow: var(--shadow);
+		border: 2px solid var(--secondary-beige);
+	}
+
+	.contact-form h3 {
+		font-size: 1.5rem;
+		margin-bottom: 2rem;
+		color: var(--text-dark);
+	}
+
+	.form-row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.form-group {
+		margin-bottom: 1.5rem;
+	}
+
+	.form-group label {
+		display: block;
+		margin-bottom: 0.5rem;
+		font-weight: 500;
+		color: var(--text-dark);
+	}
+
+	.form-group input,
+	.form-group select,
+	.form-group textarea {
+		width: 100%;
+		padding: 0.75rem;
+		border: 2px solid #e2e8f0;
+		border-radius: 0.5rem;
+		font-size: 1rem;
+		transition: border-color 0.3s ease;
+	}
+
+	.form-group input:focus,
+	.form-group select:focus,
+	.form-group textarea:focus {
+		outline: none;
+		border-color: var(--primary-green);
+	}
+
+	.contact-map {
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+
+	.contact-map h3 {
+		font-size: 1.5rem;
+		margin-bottom: 2rem;
+		color: var(--text-dark);
+	}
+
+	.map-container {
+		box-shadow: var(--shadow-lg);
+		border-radius: 1rem;
+		overflow: hidden;
+		background-color: var(--white);
+		padding: 1rem;
+	}
+
+	.additional-info h3 {
+		font-size: 2rem;
+		text-align: center;
+		margin-bottom: 3rem;
+		color: var(--text-dark);
+	}
+
+	.info-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+
+	.info-box {
+		background-color: var(--secondary-beige);
+		padding: 2rem;
+		border-radius: 1rem;
+		text-align: center;
+	}
+
+	.info-box h4 {
+		font-size: 1.1rem;
+		margin-bottom: 1rem;
+		color: var(--text-dark);
+	}
+
+	.info-box p {
+		color: var(--text-light);
+		line-height: 1.6;
+	}
+
+	@media (max-width: 768px) {
+		.contact-content {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.form-row {
+			grid-template-columns: 1fr;
+		}
+
+		.hero-title {
+			font-size: 2.5rem;
+		}
+
+		.contact-form {
+			padding: 1.5rem;
+		}
+
+		.contact-item {
+			padding: 1rem;
+		}
+
+		.info-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

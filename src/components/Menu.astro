@@ -1,0 +1,177 @@
+<section id="menu" class="section menu">
+	<div class="container">
+		<div class="menu-header">
+			<h2 class="section-title">Saveurs printanières à l'honneur</h2>
+			<p class="menu-intro">Voici quelques propositions de saison :</p>
+		</div>
+		
+		<div class="menu-grid">
+			<div class="menu-item">
+				<div class="menu-item-image">
+					<img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Crudité Asperges, Burratina, Truite fumée du Léman" />
+				</div>
+				<div class="menu-item-content">
+					<h3>Crudité Asperges, Burratina, Truite fumée du Léman</h3>
+					<p class="menu-item-description">Fraîcheur printanière avec des asperges locales, burratina crémeuse et truite fumée du Léman</p>
+					<span class="menu-item-price">29.–</span>
+				</div>
+			</div>
+			
+			<div class="menu-item">
+				<div class="menu-item-image">
+					<img src="https://images.pexels.com/photos/5938319/pexels-photo-5938319.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Asperges et Jambon Cru" />
+				</div>
+				<div class="menu-item-content">
+					<h3>Asperges et Jambon Cru</h3>
+					<p class="menu-item-description">Mariage parfait entre les asperges tendres de saison et le jambon cru finement tranché</p>
+					<span class="menu-item-price">36.–</span>
+				</div>
+			</div>
+			
+			<div class="menu-item featured">
+				<div class="menu-item-image">
+					<img src="https://images.pexels.com/photos/8753657/pexels-photo-8753657.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Cabri de Puidoux rôti à la provençale" />
+				</div>
+				<div class="menu-item-content">
+					<h3>Cabri de Puidoux rôti à la provençale</h3>
+					<p class="menu-item-description">Spécialité locale : cabri tendre rôti aux herbes de Provence, tagliatelles fraîches et légumes de saison</p>
+					<span class="menu-item-price">45.–</span>
+					<span class="featured-badge">Spécialité</span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="menu-cta">
+			<p>Découvrez notre carte complète en nous rendant visite</p>
+			<a href="tel:+41219461126" class="btn btn-primary">Réserver maintenant</a>
+		</div>
+	</div>
+</section>
+
+<style>
+	.menu {
+		background-color: var(--white);
+	}
+
+	.menu-header {
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+
+	.section-title {
+		font-size: 2.5rem;
+		color: var(--text-dark);
+		margin-bottom: 1rem;
+	}
+
+	.menu-intro {
+		font-size: 1.1rem;
+		color: var(--text-light);
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.menu-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 2rem;
+		margin-bottom: 4rem;
+	}
+
+	.menu-item {
+		background-color: var(--white);
+		border-radius: 1rem;
+		overflow: hidden;
+		box-shadow: var(--shadow);
+		transition: all 0.3s ease;
+		position: relative;
+	}
+
+	.menu-item:hover {
+		transform: translateY(-5px);
+		box-shadow: var(--shadow-lg);
+	}
+
+	.menu-item.featured {
+		border: 2px solid var(--primary-green);
+	}
+
+	.menu-item-image {
+		height: 200px;
+		overflow: hidden;
+	}
+
+	.menu-item-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.3s ease;
+	}
+
+	.menu-item:hover .menu-item-image img {
+		transform: scale(1.05);
+	}
+
+	.menu-item-content {
+		padding: 1.5rem;
+		position: relative;
+	}
+
+	.menu-item-content h3 {
+		font-size: 1.25rem;
+		margin-bottom: 0.5rem;
+		color: var(--text-dark);
+	}
+
+	.menu-item-description {
+		color: var(--text-light);
+		font-size: 0.95rem;
+		line-height: 1.6;
+		margin-bottom: 1rem;
+	}
+
+	.menu-item-price {
+		font-size: 1.5rem;
+		font-weight: 600;
+		color: var(--primary-green);
+	}
+
+	.featured-badge {
+		position: absolute;
+		top: -0.5rem;
+		right: 1rem;
+		background-color: var(--primary-green);
+		color: var(--white);
+		padding: 0.25rem 0.75rem;
+		border-radius: 1rem;
+		font-size: 0.8rem;
+		font-weight: 500;
+	}
+
+	.menu-cta {
+		text-align: center;
+		padding: 3rem 2rem;
+		background-color: var(--secondary-beige);
+		border-radius: 1rem;
+	}
+
+	.menu-cta p {
+		font-size: 1.1rem;
+		color: var(--text-light);
+		margin-bottom: 1.5rem;
+	}
+
+	@media (max-width: 768px) {
+		.menu-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.section-title {
+			font-size: 2rem;
+		}
+
+		.menu-cta {
+			padding: 2rem 1rem;
+		}
+	}
+</style>

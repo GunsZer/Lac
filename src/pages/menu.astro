@@ -1,0 +1,674 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Notre Menu - Lac de Bret | Cuisine de saison à Puidoux">
+	<Navigation />
+	<main>
+		<section class="page-hero menu-hero">
+			<div class="hero-background">
+				<img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" alt="Plats du restaurant" />
+				<div class="hero-overlay"></div>
+			</div>
+			<div class="container">
+				<div class="hero-content">
+					<h1 class="hero-title">Notre Menu</h1>
+					<p class="hero-subtitle">Cuisine de saison généreuse et authentique</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section menu-intro">
+			<div class="container">
+				<div class="intro-content">
+					<h2>Une cuisine qui célèbre les saisons</h2>
+					<p>Notre chef et son équipe vous proposent une cuisine généreuse qui met à l'honneur les produits locaux et de saison. Chaque plat est préparé avec passion dans le respect des traditions culinaires suisses, tout en apportant une touche de modernité.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section menu-content">
+			<div class="container">
+				<!-- Entrées -->
+				<div class="menu-section">
+					<h3 class="menu-section-title">Entrées</h3>
+					<div class="menu-items">
+						<div class="menu-item">
+							<div class="item-header">
+								<h4>Crudité Asperges, Burratina, Truite fumée du Léman</h4>
+								<span class="price">29.–</span>
+							</div>
+							<p class="description">Fraîcheur printanière avec des asperges locales, burratina crémeuse et truite fumée du Léman</p>
+						</div>
+
+						<div class="menu-item">
+							<div class="item-header">
+								<h4>Asperges et Jambon Cru</h4>
+								<span class="price">36.–</span>
+							</div>
+							<p class="description">Mariage parfait entre les asperges tendres de saison et le jambon cru finement tranché</p>
+						</div>
+
+						<div class="menu-item">
+							<div class="item-header">
+								<h4>Tartare de Saumon du Léman</h4>
+								<span class="price">32.–</span>
+							</div>
+							<p class="description">Saumon frais du lac Léman, avocat, câpres et citron vert, toast de pain de campagne</p>
+						</div>
+
+						<div class="menu-item">
+							<div class="item-header">
+								<h4>Salade de Chèvre Chaud aux Noix</h4>
+								<span class="price">24.–</span>
+							</div>
+							<p class="description">Mesclun de salade, crottin de chèvre gratiné, noix de Grenoble, vinaigrette au miel</p>
+						</div>
+
+						<div class="menu-item">
+							<div class="item-header">
+								<h4>Carpaccio de Bœuf aux Copeaux de Gruyère</h4>
+								<span class="price">28.–</span>
+							</div>
+							<p class="description">Fines lamelles de bœuf, roquette, copeaux de Gruyère AOP, huile de truffe</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Plats Principaux -->
+				<div class="menu-section">
+					<h3 class="menu-section-title">Plats Principaux</h3>
+					<div class="menu-items">
+						<div class="menu-item featured">
+							<div class="item-header">
+								<h4>Cabri de Puidoux rôti à la provençale</h4>
+								<span class="price">45.–</span>
+								<span class="specialty-badge">Spécialité</span>
+							</div>
+							<p class="description">Spécialité locale : cabri tendre rôti aux herbes de Provence, tagliatelles fraîches et légumes de saison</p>
+						</div>
+
+						<div class="menu-item">
+							<div class="item-header">
+								<h4>Filets de Perche du Léman</h4>
+								<span class="price">42.–</span>
+							</div>
+							<p class="description">Meunière ou aux amandes, pommes de terre nouvelles et salade verte</p>
+						</div>
+
+						<div class="menu-item">
+							<div class="item-header">
+								<h4>Entrecôte de Bœuf Suisse</h4>
+								<span class="price">48.–</span>
+							</div>
+							<p class="description">Grillée au feu de bois, sauce café de Paris, frites maison et légumes grillés</p>
+						</div>
+
+						<div class="menu-item">
+							<div class="item-header">
+								<h4>Suprême de Volaille aux Morilles</h4>
+								<span class="price">38.–</span>
+							</div>
+							<p class="description">Blanc de poulet fermier, sauce crémeuse aux morilles, rösti et haricots verts</p>
+						</div>
+
+						<div class="menu-item">
+							<div class="item-header">
+								<h4>Risotto aux Champignons des Bois</h4>
+								<span class="price">34.–</span>
+							</div>
+							<p class="description">Riz Carnaroli, champignons de saison, parmesan et truffe (végétarien)</p>
+						</div>
+
+						<div class="menu-item">
+							<div class="item-header">
+								<h4>Saumon Grillé, Sauce Hollandaise</h4>
+								<span class="price">44.–</span>
+							</div>
+							<p class="description">Pavé de saumon grillé, sauce hollandaise maison, légumes vapeur et riz pilaf</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Spécialités Suisses -->
+				<div class="menu-section">
+					<h3 class="menu-section-title">Spécialités Suisses</h3>
+					<div class="menu-items">
+						<div class="menu-item">
+							<div class="item-header">
+								<h4>Fondue Moitié-Moitié</h4>
+								<span class="price">28.– / pers.</span>
+							</div>
+							<p class="description">Gruyère et Vacherin Fribourgeois, pain de campagne, cornichons et oignons grelots</p>
+							<p class="note">Minimum 2 personnes</p>
+						</div>
+
+						<div class="menu-item">
+							<div class="item-header">
+								<h4>Raclette Traditionnelle</h4>
+								<span class="price">32.– / pers.</span>
+							</div>
+							<p class="description">Fromage à raclette du Valais, pommes de terre en robe des champs, charcuterie</p>
+							<p class="note">Minimum 2 personnes</p>
+						</div>
+
+						<div class="menu-item">
+							<div class="item-header">
+								<h4>Rösti Vaudois aux Lardons</h4>
+								<span class="price">26.–</span>
+							</div>
+							<p class="description">Galette de pommes de terre dorée, lardons fumés, œuf au plat et salade</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Desserts -->
+				<div class="menu-section">
+					<h3 class="menu-section-title">Desserts</h3>
+					<div class="menu-items">
+						<div class="menu-item">
+							<div class="item-header">
+								<h4>Tarte aux Pommes Maison</h4>
+								<span class="price">12.–</span>
+							</div>
+							<p class="description">Pâte brisée, pommes du pays, cannelle et glace vanille</p>
+						</div>
+
+						<div class="menu-item">
+							<div class="item-header">
+								<h4>Mousse au Chocolat Valrhona</h4>
+								<span class="price">14.–</span>
+							</div>
+							<p class="description">Chocolat noir 70%, chantilly et copeaux de chocolat</p>
+						</div>
+
+						<div class="menu-item">
+							<div class="item-header">
+								<h4>Crème Brûlée à la Vanille</h4>
+								<span class="price">13.–</span>
+							</div>
+							<p class="description">Crème onctueuse, sucre caramélisé et biscuit sablé</p>
+						</div>
+
+						<div class="menu-item">
+							<div class="item-header">
+								<h4>Coupe de Glaces Artisanales</h4>
+								<span class="price">11.–</span>
+							</div>
+							<p class="description">3 boules au choix : vanille, chocolat, fraise, pistache, chantilly</p>
+						</div>
+
+						<div class="menu-item">
+							<div class="item-header">
+								<h4>Tiramisu Maison</h4>
+								<span class="price">13.–</span>
+							</div>
+							<p class="description">Mascarpone, café, cacao et biscuits à la cuillère</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Boissons -->
+				<div class="menu-section">
+					<h3 class="menu-section-title">Boissons</h3>
+					
+					<div class="drinks-subsection">
+						<h4 class="drinks-title">Vins de la Région</h4>
+						<div class="menu-items">
+							<div class="menu-item">
+								<div class="item-header">
+									<h5>Chasselas Lavaux AOC</h5>
+									<span class="price">8.– / dl</span>
+								</div>
+								<p class="description">Vin blanc sec et fruité des terrasses de Lavaux</p>
+							</div>
+
+							<div class="menu-item">
+								<div class="item-header">
+									<h5>Pinot Noir Vaud AOC</h5>
+									<span class="price">9.– / dl</span>
+								</div>
+								<p class="description">Vin rouge élégant et charpenté</p>
+							</div>
+
+							<div class="menu-item">
+								<div class="item-header">
+									<h5>Petite Arvine Valais AOC</h5>
+									<span class="price">10.– / dl</span>
+								</div>
+								<p class="description">Vin blanc aromatique aux notes d'agrumes</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="drinks-subsection">
+						<h4 class="drinks-title">Boissons Sans Alcool</h4>
+						<div class="menu-items">
+							<div class="menu-item">
+								<div class="item-header">
+									<h5>Jus de Fruits Frais</h5>
+									<span class="price">6.–</span>
+								</div>
+								<p class="description">Orange, pomme, pamplemousse</p>
+							</div>
+
+							<div class="menu-item">
+								<div class="item-header">
+									<h5>Eaux Minérales</h5>
+									<span class="price">4.– / 5.–</span>
+								</div>
+								<p class="description">Henniez plate ou gazeuse (50cl / 75cl)</p>
+							</div>
+
+							<div class="menu-item">
+								<div class="item-header">
+									<h5>Café / Thé</h5>
+									<span class="price">4.50 / 5.–</span>
+								</div>
+								<p class="description">Expresso, café crème, sélection de thés</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Menu du Jour -->
+				<div class="menu-section special-menu">
+					<h3 class="menu-section-title">Menu du Jour</h3>
+					<div class="daily-menu">
+						<p class="daily-info">Découvrez notre menu du jour qui change selon les arrivages et les saisons</p>
+						<div class="menu-prices">
+							<div class="menu-option">
+								<h4>Menu 2 services</h4>
+								<span class="price">35.–</span>
+								<p>Entrée + Plat ou Plat + Dessert</p>
+							</div>
+							<div class="menu-option">
+								<h4>Menu 3 services</h4>
+								<span class="price">45.–</span>
+								<p>Entrée + Plat + Dessert</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section menu-footer">
+			<div class="container">
+				<div class="menu-notes">
+					<h3>Informations importantes</h3>
+					<div class="notes-grid">
+						<div class="note-item">
+							<span class="note-icon">🌱</span>
+							<p><strong>Produits locaux :</strong> Nous privilégions les producteurs de la région et les produits de saison</p>
+						</div>
+						<div class="note-item">
+							<span class="note-icon">⚠️</span>
+							<p><strong>Allergies :</strong> Merci de nous signaler toute allergie alimentaire lors de votre commande</p>
+						</div>
+						<div class="note-item">
+							<span class="note-icon">👨‍🍳</span>
+							<p><strong>Préparation :</strong> Tous nos plats sont préparés minute avec des produits frais</p>
+						</div>
+						<div class="note-item">
+							<span class="note-icon">💳</span>
+							<p><strong>Paiement :</strong> Espèces, cartes de crédit et Twint acceptés</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="reservation-cta">
+					<h3>Réservez votre table</h3>
+					<p>Pour déguster nos spécialités dans le cadre exceptionnel du Lac de Bret</p>
+					<a href="tel:+41219461126" class="btn btn-primary">Appeler maintenant</a>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	.page-hero {
+		position: relative;
+		height: 50vh;
+		min-height: 350px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		margin-top: 80px;
+	}
+
+	.hero-background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -2;
+	}
+
+	.hero-background img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+
+	.hero-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 100%);
+		z-index: -1;
+	}
+
+	.hero-content {
+		text-align: center;
+		color: var(--white);
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.hero-title {
+		font-size: 3rem;
+		font-weight: 700;
+		margin-bottom: 1rem;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+	}
+
+	.hero-subtitle {
+		font-size: 1.2rem;
+		opacity: 0.95;
+		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+	}
+
+	.menu-intro {
+		background-color: var(--secondary-beige);
+		text-align: center;
+	}
+
+	.intro-content h2 {
+		font-size: 2rem;
+		margin-bottom: 1.5rem;
+		color: var(--text-dark);
+	}
+
+	.intro-content p {
+		font-size: 1.1rem;
+		line-height: 1.8;
+		color: var(--text-light);
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.menu-content {
+		background-color: var(--white);
+	}
+
+	.menu-section {
+		margin-bottom: 4rem;
+		padding-bottom: 3rem;
+		border-bottom: 2px solid var(--secondary-beige);
+	}
+
+	.menu-section:last-child {
+		border-bottom: none;
+	}
+
+	.menu-section-title {
+		font-size: 2.2rem;
+		text-align: center;
+		margin-bottom: 3rem;
+		color: var(--primary-green);
+		position: relative;
+	}
+
+	.menu-section-title::after {
+		content: '';
+		position: absolute;
+		bottom: -10px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 60px;
+		height: 3px;
+		background-color: var(--primary-green);
+	}
+
+	.menu-items {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.menu-item {
+		background-color: var(--white);
+		padding: 2rem;
+		border-radius: 1rem;
+		box-shadow: var(--shadow);
+		transition: transform 0.3s ease;
+		position: relative;
+	}
+
+	.menu-item:hover {
+		transform: translateY(-3px);
+		box-shadow: var(--shadow-lg);
+	}
+
+	.menu-item.featured {
+		border: 2px solid var(--primary-green);
+		background-color: var(--secondary-beige);
+	}
+
+	.item-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 0.5rem;
+		gap: 1rem;
+	}
+
+	.item-header h4,
+	.item-header h5 {
+		font-size: 1.3rem;
+		color: var(--text-dark);
+		margin: 0;
+		flex: 1;
+	}
+
+	.price {
+		font-size: 1.4rem;
+		font-weight: 600;
+		color: var(--primary-green);
+		white-space: nowrap;
+	}
+
+	.specialty-badge {
+		position: absolute;
+		top: -0.5rem;
+		right: 1rem;
+		background-color: var(--primary-green);
+		color: var(--white);
+		padding: 0.25rem 0.75rem;
+		border-radius: 1rem;
+		font-size: 0.8rem;
+		font-weight: 500;
+	}
+
+	.description {
+		color: var(--text-light);
+		line-height: 1.6;
+		margin-bottom: 0.5rem;
+	}
+
+	.note {
+		font-style: italic;
+		color: var(--text-light);
+		font-size: 0.9rem;
+	}
+
+	.drinks-subsection {
+		margin-bottom: 3rem;
+	}
+
+	.drinks-title {
+		font-size: 1.5rem;
+		color: var(--text-dark);
+		margin-bottom: 1.5rem;
+		text-align: center;
+	}
+
+	.special-menu {
+		background-color: var(--secondary-beige);
+		padding: 3rem;
+		border-radius: 1rem;
+		border: none;
+	}
+
+	.daily-menu {
+		text-align: center;
+	}
+
+	.daily-info {
+		font-size: 1.1rem;
+		color: var(--text-light);
+		margin-bottom: 2rem;
+	}
+
+	.menu-prices {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+
+	.menu-option {
+		background-color: var(--white);
+		padding: 2rem;
+		border-radius: 1rem;
+		box-shadow: var(--shadow);
+	}
+
+	.menu-option h4 {
+		font-size: 1.3rem;
+		margin-bottom: 0.5rem;
+		color: var(--text-dark);
+	}
+
+	.menu-option .price {
+		font-size: 1.8rem;
+		display: block;
+		margin-bottom: 0.5rem;
+	}
+
+	.menu-option p {
+		color: var(--text-light);
+		font-size: 0.9rem;
+	}
+
+	.menu-footer {
+		background-color: var(--secondary-beige);
+	}
+
+	.menu-notes {
+		margin-bottom: 4rem;
+	}
+
+	.menu-notes h3 {
+		font-size: 2rem;
+		text-align: center;
+		margin-bottom: 3rem;
+		color: var(--text-dark);
+	}
+
+	.notes-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+
+	.note-item {
+		display: flex;
+		align-items: flex-start;
+		gap: 1rem;
+		padding: 1.5rem;
+		background-color: var(--white);
+		border-radius: 1rem;
+		box-shadow: var(--shadow);
+	}
+
+	.note-icon {
+		font-size: 1.5rem;
+		flex-shrink: 0;
+		margin-top: 0.25rem;
+	}
+
+	.note-item p {
+		color: var(--text-light);
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	.reservation-cta {
+		text-align: center;
+		padding: 3rem 2rem;
+		background-color: var(--white);
+		border-radius: 1rem;
+		box-shadow: var(--shadow);
+	}
+
+	.reservation-cta h3 {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+		color: var(--text-dark);
+	}
+
+	.reservation-cta p {
+		font-size: 1.1rem;
+		color: var(--text-light);
+		margin-bottom: 2rem;
+	}
+
+	@media (max-width: 768px) {
+		.hero-title {
+			font-size: 2.5rem;
+		}
+
+		.menu-section-title {
+			font-size: 1.8rem;
+		}
+
+		.menu-item {
+			padding: 1.5rem;
+		}
+
+		.item-header {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 0.5rem;
+		}
+
+		.item-header h4,
+		.item-header h5 {
+			font-size: 1.2rem;
+		}
+
+		.price {
+			font-size: 1.3rem;
+		}
+
+		.notes-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.menu-prices {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

@@ -1,0 +1,360 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Le Jardin d'Hiver - Lac de Bret | Espace événementiel à Puidoux">
+	<Navigation />
+	<main>
+		<section class="page-hero jardin-hero">
+			<div class="hero-background">
+				<img src="https://images.pexels.com/photos/1395967/pexels-photo-1395967.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" alt="Jardin d'hiver" />
+				<div class="hero-overlay"></div>
+			</div>
+			<div class="container">
+				<div class="hero-content">
+					<h1 class="hero-title">Le Jardin d'Hiver</h1>
+					<p class="hero-subtitle">Espace événementiel exceptionnel pour vos grandes occasions</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section jardin-details">
+			<div class="container">
+				<div class="jardin-content">
+					<div class="jardin-text">
+						<h2 class="section-title">Un espace unique pour vos événements</h2>
+						<div class="jardin-description">
+							<p>
+								Notre jardin d'hiver est un espace lumineux et spacieux, idéal pour vos événements privés et professionnels. Avec sa verrière exceptionnelle et sa décoration raffinée, il peut accueillir jusqu'à 200 personnes dans un cadre élégant et moderne.
+							</p>
+							<p>
+								Que ce soit pour un mariage, un anniversaire, une réception d'entreprise ou tout autre événement spécial, notre jardin d'hiver offre un cadre unique alliant charme traditionnel et confort moderne. La lumière naturelle qui baigne l'espace crée une atmosphère magique à toute heure de la journée.
+							</p>
+						</div>
+					</div>
+					
+					<div class="jardin-image">
+						<img src="https://images.pexels.com/photos/1395967/pexels-photo-1395967.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Jardin d'hiver pour événements" />
+					</div>
+				</div>
+
+				<div class="event-types">
+					<h3>Types d'événements</h3>
+					<div class="events-grid">
+						<div class="event-card">
+							<div class="event-icon">💒</div>
+							<h4>Mariages</h4>
+							<p>Célébrez votre union dans un cadre romantique et élégant avec vue sur le lac</p>
+						</div>
+						<div class="event-card">
+							<div class="event-icon">🎉</div>
+							<h4>Anniversaires</h4>
+							<p>Fêtez vos moments importants dans une ambiance chaleureuse et festive</p>
+						</div>
+						<div class="event-card">
+							<div class="event-icon">🏢</div>
+							<h4>Événements d'entreprise</h4>
+							<p>Organisez vos séminaires, conférences et réceptions professionnelles</p>
+						</div>
+						<div class="event-card">
+							<div class="event-icon">🎊</div>
+							<h4>Célébrations privées</h4>
+							<p>Baptêmes, communions, retrouvailles familiales dans un cadre exceptionnel</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="jardin-features">
+					<h3>Caractéristiques de l'espace</h3>
+					<div class="features-grid">
+						<div class="feature-box">
+							<span class="feature-icon">👥</span>
+							<h4>Capacité maximale</h4>
+							<p>200 personnes</p>
+						</div>
+						<div class="feature-box">
+							<span class="feature-icon">🌿</span>
+							<h4>Verrière naturelle</h4>
+							<p>Lumière naturelle toute la journée</p>
+						</div>
+						<div class="feature-box">
+							<span class="feature-icon">🎵</span>
+							<h4>Équipement audio</h4>
+							<p>Sonorisation professionnelle</p>
+						</div>
+						<div class="feature-box">
+							<span class="feature-icon">🍽️</span>
+							<h4>Service traiteur</h4>
+							<p>Menu personnalisé selon vos besoins</p>
+						</div>
+						<div class="feature-box">
+							<span class="feature-icon">🚗</span>
+							<h4>Parking privé</h4>
+							<p>Stationnement pour vos invités</p>
+						</div>
+						<div class="feature-box">
+							<span class="feature-icon">🌅</span>
+							<h4>Vue panoramique</h4>
+							<p>Sur le lac et les montagnes</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section pricing-section">
+			<div class="container">
+				<div class="pricing-content">
+					<h3>Planifiez votre événement</h3>
+					<p>Contactez-nous pour discuter de vos besoins et recevoir un devis personnalisé</p>
+					<div class="pricing-actions">
+						<a href="tel:+41219461126" class="btn btn-primary">Appeler pour un devis</a>
+						<a href="/contact" class="btn btn-secondary">Demande écrite</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	.page-hero {
+		position: relative;
+		height: 60vh;
+		min-height: 400px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		margin-top: 80px;
+	}
+
+	.hero-background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -2;
+	}
+
+	.hero-background img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+
+	.hero-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 100%);
+		z-index: -1;
+	}
+
+	.hero-content {
+		text-align: center;
+		color: var(--white);
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.hero-title {
+		font-size: 3rem;
+		font-weight: 700;
+		margin-bottom: 1rem;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+	}
+
+	.hero-subtitle {
+		font-size: 1.2rem;
+		opacity: 0.95;
+		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+	}
+
+	.jardin-details {
+		background-color: var(--white);
+	}
+
+	.jardin-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+		align-items: center;
+		margin-bottom: 5rem;
+	}
+
+	.section-title {
+		font-size: 2.5rem;
+		color: var(--text-dark);
+		margin-bottom: 2rem;
+	}
+
+	.jardin-description {
+		font-size: 1.1rem;
+		line-height: 1.8;
+		color: var(--text-light);
+	}
+
+	.jardin-description p {
+		margin-bottom: 1.5rem;
+	}
+
+	.jardin-image img {
+		width: 100%;
+		height: 400px;
+		object-fit: cover;
+		border-radius: 1rem;
+		box-shadow: var(--shadow-lg);
+	}
+
+	.event-types {
+		margin-bottom: 5rem;
+	}
+
+	.event-types h3 {
+		font-size: 2rem;
+		text-align: center;
+		margin-bottom: 3rem;
+		color: var(--text-dark);
+	}
+
+	.events-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+
+	.event-card {
+		background-color: var(--secondary-beige);
+		padding: 2rem;
+		border-radius: 1rem;
+		text-align: center;
+		transition: transform 0.3s ease;
+	}
+
+	.event-card:hover {
+		transform: translateY(-5px);
+	}
+
+	.event-icon {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	.event-card h4 {
+		font-size: 1.3rem;
+		margin-bottom: 1rem;
+		color: var(--text-dark);
+	}
+
+	.event-card p {
+		color: var(--text-light);
+		line-height: 1.6;
+	}
+
+	.jardin-features h3 {
+		font-size: 2rem;
+		text-align: center;
+		margin-bottom: 3rem;
+		color: var(--text-dark);
+	}
+
+	.features-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 2rem;
+	}
+
+	.feature-box {
+		background-color: var(--white);
+		padding: 2rem;
+		border-radius: 1rem;
+		text-align: center;
+		box-shadow: var(--shadow);
+		transition: transform 0.3s ease;
+	}
+
+	.feature-box:hover {
+		transform: translateY(-5px);
+	}
+
+	.feature-icon {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	.feature-box h4 {
+		font-size: 1.1rem;
+		margin-bottom: 0.5rem;
+		color: var(--text-dark);
+	}
+
+	.feature-box p {
+		color: var(--text-light);
+		font-size: 0.9rem;
+	}
+
+	.pricing-section {
+		background-color: var(--secondary-beige);
+		text-align: center;
+	}
+
+	.pricing-content h3 {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+		color: var(--text-dark);
+	}
+
+	.pricing-content p {
+		font-size: 1.1rem;
+		color: var(--text-light);
+		margin-bottom: 2rem;
+	}
+
+	.pricing-actions {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	@media (max-width: 768px) {
+		.jardin-content {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.hero-title {
+			font-size: 2.5rem;
+		}
+
+		.section-title {
+			font-size: 2rem;
+		}
+
+		.events-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.features-grid {
+			grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		}
+
+		.pricing-actions {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.pricing-actions .btn {
+			width: 100%;
+			max-width: 280px;
+		}
+	}
+</style>

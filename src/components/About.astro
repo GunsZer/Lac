@@ -1,0 +1,142 @@
+<section id="about" class="section about">
+	<div class="container">
+		<div class="about-content">
+			<div class="about-text">
+				<h2 class="section-title">Une histoire de famille depuis plus de 40 ans</h2>
+				<div class="about-description">
+					<p>
+						Le Lac de Bret, endroit idyllique pour flâner et se restaurer, est tenu depuis 1979 par la famille Da Dalt. Le restaurant propose un cadre enchanteur avec plusieurs ambiances : salle intérieure cosy, jardin d'hiver pour événements jusqu'à 200 personnes, et terrasse panoramique sur les montagnes vaudoises et françaises.
+					</p>
+					<p>
+						La passion du goût s'exprime ici à travers des produits locaux sublimés au fil des saisons.
+					</p>
+				</div>
+			</div>
+			
+			<div class="about-image">
+				<img src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Terrasse du restaurant avec vue sur le lac" />
+			</div>
+		</div>
+		
+		<div class="about-features">
+			<div class="feature">
+				<div class="feature-icon">🏡</div>
+				<h3>Salle intérieure cosy</h3>
+				<p>Ambiance chaleureuse pour vos repas en famille</p>
+			</div>
+			
+			<div class="feature">
+				<div class="feature-icon">🌿</div>
+				<h3>Jardin d'hiver</h3>
+				<p>Espace événementiel jusqu'à 200 personnes</p>
+			</div>
+			
+			<div class="feature">
+				<div class="feature-icon">🏔️</div>
+				<h3>Terrasse panoramique</h3>
+				<p>Vue imprenable sur les montagnes vaudoises</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.about {
+		background-color: var(--secondary-beige);
+	}
+
+	.about-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+		align-items: center;
+		margin-bottom: 4rem;
+	}
+
+	.section-title {
+		font-size: 2.5rem;
+		color: var(--text-dark);
+		margin-bottom: 2rem;
+	}
+
+	.about-description {
+		font-size: 1.1rem;
+		line-height: 1.8;
+		color: var(--text-light);
+	}
+
+	.about-description p {
+		margin-bottom: 1.5rem;
+	}
+
+	.about-image {
+		position: relative;
+	}
+
+	.about-image img {
+		width: 100%;
+		height: 400px;
+		object-fit: cover;
+		border-radius: 1rem;
+		box-shadow: var(--shadow-lg);
+	}
+
+	.about-features {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin-top: 4rem;
+	}
+
+	.feature {
+		text-align: center;
+		padding: 2rem;
+		background-color: var(--white);
+		border-radius: 1rem;
+		box-shadow: var(--shadow);
+		transition: transform 0.3s ease;
+	}
+
+	.feature:hover {
+		transform: translateY(-5px);
+	}
+
+	.feature-icon {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	.feature h3 {
+		font-size: 1.25rem;
+		margin-bottom: 0.5rem;
+		color: var(--text-dark);
+	}
+
+	.feature p {
+		color: var(--text-light);
+		font-size: 0.95rem;
+	}
+
+	@media (max-width: 768px) {
+		.about-content {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.section-title {
+			font-size: 2rem;
+		}
+
+		.about-image img {
+			height: 300px;
+		}
+
+		.about-features {
+			gap: 1.5rem;
+		}
+
+		.feature {
+			padding: 1.5rem;
+		}
+	}
+</style>

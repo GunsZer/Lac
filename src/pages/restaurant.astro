@@ -1,0 +1,326 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Le Restaurant - Lac de Bret | Cuisine familiale à Puidoux">
+	<Navigation />
+	<main>
+		<section class="page-hero restaurant-hero">
+			<div class="hero-background">
+				<img src="https://images.pexels.com/photos/6267/menu-restaurant-vintage-table.jpg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" alt="Intérieur du restaurant" />
+				<div class="hero-overlay"></div>
+			</div>
+			<div class="container">
+				<div class="hero-content">
+					<h1 class="hero-title">Le Restaurant</h1>
+					<p class="hero-subtitle">Une ambiance chaleureuse au cœur de la tradition culinaire</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section restaurant-details">
+			<div class="container">
+				<div class="restaurant-content">
+					<div class="restaurant-text">
+						<h2 class="section-title">Salle intérieure cosy</h2>
+						<div class="restaurant-description">
+							<p>
+								Notre salle principale offre une atmosphère chaleureuse et intimiste, parfaite pour vos repas en famille ou entre amis. Décorée avec goût dans un style traditionnel suisse, elle peut accueillir jusqu'à 60 personnes dans un cadre authentique.
+							</p>
+							<p>
+								Les grandes baies vitrées offrent une vue imprenable sur le lac de Bret, créant une ambiance unique où la nature s'invite à votre table. L'éclairage tamisé et le mobilier en bois massif contribuent à créer cette atmosphère si particulière qui fait la réputation de notre établissement.
+							</p>
+						</div>
+						
+						<div class="restaurant-features">
+							<div class="feature-item">
+								<span class="feature-icon">👥</span>
+								<div>
+									<h4>Capacité</h4>
+									<p>Jusqu'à 60 personnes</p>
+								</div>
+							</div>
+							<div class="feature-item">
+								<span class="feature-icon">🪟</span>
+								<div>
+									<h4>Vue panoramique</h4>
+									<p>Sur le lac de Bret</p>
+								</div>
+							</div>
+							<div class="feature-item">
+								<span class="feature-icon">🕯️</span>
+								<div>
+									<h4>Ambiance</h4>
+									<p>Chaleureuse et intimiste</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="restaurant-image">
+						<img src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Salle principale du restaurant" />
+					</div>
+				</div>
+
+				<div class="menu-highlights">
+					<h3>Nos spécialités de saison</h3>
+					<div class="menu-grid">
+						<div class="menu-card">
+							<img src="https://images.pexels.com/photos/8753657/pexels-photo-8753657.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Cabri de Puidoux" />
+							<div class="menu-card-content">
+								<h4>Cabri de Puidoux</h4>
+								<p>Rôti à la provençale, tagliatelles fraîches</p>
+								<span class="price">45.–</span>
+							</div>
+						</div>
+						<div class="menu-card">
+							<img src="https://images.pexels.com/photos/5938319/pexels-photo-5938319.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Asperges de saison" />
+							<div class="menu-card-content">
+								<h4>Asperges et Jambon Cru</h4>
+								<p>Asperges tendres de saison</p>
+								<span class="price">36.–</span>
+							</div>
+						</div>
+						<div class="menu-card">
+							<img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Crudité asperges" />
+							<div class="menu-card-content">
+								<h4>Crudité Asperges, Burratina</h4>
+								<p>Truite fumée du Léman</p>
+								<span class="price">29.–</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section cta-section">
+			<div class="container">
+				<div class="cta-content">
+					<h3>Réservez votre table</h3>
+					<p>Découvrez notre cuisine de saison dans un cadre exceptionnel</p>
+					<a href="tel:+41219461126" class="btn btn-primary">Appeler maintenant</a>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	.page-hero {
+		position: relative;
+		height: 60vh;
+		min-height: 400px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		margin-top: 80px;
+	}
+
+	.hero-background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -2;
+	}
+
+	.hero-background img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+
+	.hero-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 100%);
+		z-index: -1;
+	}
+
+	.hero-content {
+		text-align: center;
+		color: var(--white);
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.hero-title {
+		font-size: 3rem;
+		font-weight: 700;
+		margin-bottom: 1rem;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+	}
+
+	.hero-subtitle {
+		font-size: 1.2rem;
+		opacity: 0.95;
+		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+	}
+
+	.restaurant-details {
+		background-color: var(--white);
+	}
+
+	.restaurant-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+		align-items: center;
+		margin-bottom: 4rem;
+	}
+
+	.section-title {
+		font-size: 2.5rem;
+		color: var(--text-dark);
+		margin-bottom: 2rem;
+	}
+
+	.restaurant-description {
+		font-size: 1.1rem;
+		line-height: 1.8;
+		color: var(--text-light);
+		margin-bottom: 3rem;
+	}
+
+	.restaurant-description p {
+		margin-bottom: 1.5rem;
+	}
+
+	.restaurant-features {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.feature-item {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 1rem;
+		background-color: var(--secondary-beige);
+		border-radius: 0.5rem;
+	}
+
+	.feature-icon {
+		font-size: 1.5rem;
+	}
+
+	.feature-item h4 {
+		margin-bottom: 0.25rem;
+		color: var(--text-dark);
+	}
+
+	.feature-item p {
+		color: var(--text-light);
+		font-size: 0.9rem;
+	}
+
+	.restaurant-image img {
+		width: 100%;
+		height: 400px;
+		object-fit: cover;
+		border-radius: 1rem;
+		box-shadow: var(--shadow-lg);
+	}
+
+	.menu-highlights {
+		text-align: center;
+	}
+
+	.menu-highlights h3 {
+		font-size: 2rem;
+		margin-bottom: 3rem;
+		color: var(--text-dark);
+	}
+
+	.menu-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.menu-card {
+		background-color: var(--white);
+		border-radius: 1rem;
+		overflow: hidden;
+		box-shadow: var(--shadow);
+		transition: transform 0.3s ease;
+	}
+
+	.menu-card:hover {
+		transform: translateY(-5px);
+	}
+
+	.menu-card img {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+	}
+
+	.menu-card-content {
+		padding: 1.5rem;
+	}
+
+	.menu-card h4 {
+		font-size: 1.2rem;
+		margin-bottom: 0.5rem;
+		color: var(--text-dark);
+	}
+
+	.menu-card p {
+		color: var(--text-light);
+		margin-bottom: 1rem;
+	}
+
+	.price {
+		font-size: 1.3rem;
+		font-weight: 600;
+		color: var(--primary-green);
+	}
+
+	.cta-section {
+		background-color: var(--secondary-beige);
+		text-align: center;
+	}
+
+	.cta-content h3 {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+		color: var(--text-dark);
+	}
+
+	.cta-content p {
+		font-size: 1.1rem;
+		color: var(--text-light);
+		margin-bottom: 2rem;
+	}
+
+	@media (max-width: 768px) {
+		.restaurant-content {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.hero-title {
+			font-size: 2.5rem;
+		}
+
+		.section-title {
+			font-size: 2rem;
+		}
+
+		.menu-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

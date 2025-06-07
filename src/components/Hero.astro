@@ -1,0 +1,217 @@
+<section id="home" class="hero">
+	<div class="hero-background">
+		<video autoplay muted loop playsinline preload="auto" id="hero-video">
+			<source src="/AccueilHD.mp4" type="video/mp4">
+			<!-- Fallback content for browsers that don't support video -->
+			<div class="video-fallback">
+				<img src="https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" alt="Restaurant du Lac de Bret" />
+			</div>
+		</video>
+		<div class="hero-overlay"></div>
+	</div>
+	
+	<div class="container">
+		<div class="hero-content">
+			<h1 class="hero-title">Un restaurant au bord du lac, entre terroir et tradition</h1>
+			<p class="hero-subtitle">Depuis 1979, une aventure culinaire familiale à Puidoux</p>
+			
+			<div class="hero-actions">
+				<a href="tel:+41219461126" class="btn btn-primary">Réserver une table</a>
+				<a href="#menu" class="btn btn-secondary">Voir notre menu de saison</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.hero {
+		position: relative;
+		height: 100vh;
+		min-height: 600px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+	}
+
+	.hero-background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -2;
+	}
+
+	.hero-background video {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+
+	.video-fallback {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	.video-fallback img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+
+	.hero-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 100%);
+		z-index: -1;
+	}
+
+	.hero-content {
+		text-align: center;
+		color: var(--white);
+		max-width: 800px;
+		margin: 0 auto;
+		padding: 2rem;
+		animation: fadeInUp 1s ease-out;
+		z-index: 1;
+		position: relative;
+	}
+
+	@keyframes fadeInUp {
+		from {
+			opacity: 0;
+			transform: translateY(30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.hero-title {
+		font-size: 3.5rem;
+		font-weight: 700;
+		margin-bottom: 1.5rem;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+		animation: fadeInUp 1s ease-out 0.2s both;
+	}
+
+	.hero-subtitle {
+		font-size: 1.25rem;
+		margin-bottom: 2.5rem;
+		opacity: 0.95;
+		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+		animation: fadeInUp 1s ease-out 0.4s both;
+	}
+
+	.hero-actions {
+		display: flex;
+		gap: 1.5rem;
+		justify-content: center;
+		flex-wrap: wrap;
+		animation: fadeInUp 1s ease-out 0.6s both;
+	}
+
+	/* Optimisation pour les appareils mobiles */
+	@media (max-width: 768px) {
+		.hero {
+			height: 80vh;
+			min-height: 500px;
+		}
+
+		.hero-title {
+			font-size: 2.5rem;
+		}
+
+		.hero-subtitle {
+			font-size: 1.1rem;
+		}
+
+		.hero-actions {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.hero-actions .btn {
+			width: 100%;
+			max-width: 280px;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.hero-title {
+			font-size: 2rem;
+		}
+
+		.hero-content {
+			padding: 1rem;
+		}
+	}
+
+	/* Pause vidéo si l'utilisateur préfère réduire les mouvements */
+	@media (prefers-reduced-motion: reduce) {
+		.hero-background video {
+			animation-play-state: paused;
+		}
+		
+		.hero-content,
+		.hero-title,
+		.hero-subtitle,
+		.hero-actions {
+			animation: none;
+		}
+	}
+</style>
+
+<script>
+	// Gestion de la vidéo
+	document.addEventListener('DOMContentLoaded', function() {
+		const video = document.getElementById('hero-video');
+		
+		if (video) {
+			// Forcer le chargement et la lecture de la vidéo
+			video.load();
+			
+			// Tenter de lire la vidéo dès qu'elle est prête
+			video.addEventListener('loadeddata', function() {
+				console.log('Vidéo chargée, tentative de lecture...');
+				const playPromise = video.play();
+				
+				if (playPromise !== undefined) {
+					playPromise.then(() => {
+						console.log('Lecture automatique réussie');
+					}).catch(error => {
+						console.log('Lecture automatique bloquée par le navigateur:', error);
+						// La vidéo est visible mais en pause - l'utilisateur peut cliquer pour la lancer
+					});
+				}
+			});
+
+			// Gérer les erreurs de chargement
+			video.addEventListener('error', function(e) {
+				console.error('Erreur de chargement de la vidéo:', e);
+				// En cas d'erreur, afficher l'image de fallback
+				const fallback = document.querySelector('.video-fallback');
+				if (fallback) {
+					fallback.style.display = 'block';
+				}
+			});
+
+			// Assurer que la vidéo reste en boucle
+			video.addEventListener('ended', function() {
+				video.currentTime = 0;
+				video.play();
+			});
+		}
+	});
+</script>
+</section>

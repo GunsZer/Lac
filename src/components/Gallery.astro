@@ -1,0 +1,156 @@
+<section id="gallery" class="section gallery">
+	<div class="container">
+		<div class="gallery-header">
+			<h2 class="section-title">Nos espaces & spécialités</h2>
+			<p class="gallery-intro">Découvrez l'ambiance unique de notre restaurant et nos créations culinaires</p>
+		</div>
+		
+		<div class="gallery-grid">
+			<div class="gallery-item large">
+				<img src="https://images.pexels.com/photos/8753657/pexels-photo-8753657.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Plat de cabri avec sauce" />
+				<div class="gallery-overlay">
+					<h3>Cabri de Puidoux</h3>
+					<p>Notre spécialité locale rôtie à la provençale</p>
+				</div>
+			</div>
+			
+			<div class="gallery-item">
+				<img src="https://images.pexels.com/photos/5938319/pexels-photo-5938319.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Assiette d'asperges" />
+				<div class="gallery-overlay">
+					<h3>Asperges de saison</h3>
+					<p>Fraîcheur printanière</p>
+				</div>
+			</div>
+			
+			<div class="gallery-item">
+				<img src="https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Vue aérienne du lac et du restaurant" />
+				<div class="gallery-overlay">
+					<h3>Vue aérienne</h3>
+					<p>Notre cadre idyllique au bord du lac</p>
+				</div>
+			</div>
+			
+			<div class="gallery-item">
+				<img src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Terrasse avec vue" />
+				<div class="gallery-overlay">
+					<h3>Terrasse panoramique</h3>
+					<p>Vue sur les montagnes vaudoises</p>
+				</div>
+			</div>
+			
+			<div class="gallery-item large">
+				<img src="https://images.pexels.com/photos/6267/menu-restaurant-vintage-table.jpg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Ambiance intérieure" />
+				<div class="gallery-overlay">
+					<h3>Jardin d'hiver</h3>
+					<p>Espace événementiel jusqu'à 200 personnes</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.gallery {
+		background-color: var(--secondary-beige);
+	}
+
+	.gallery-header {
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+
+	.section-title {
+		font-size: 2.5rem;
+		color: var(--text-dark);
+		margin-bottom: 1rem;
+	}
+
+	.gallery-intro {
+		font-size: 1.1rem;
+		color: var(--text-light);
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.gallery-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 1.5rem;
+		grid-auto-rows: 250px;
+	}
+
+	.gallery-item {
+		position: relative;
+		border-radius: 1rem;
+		overflow: hidden;
+		cursor: pointer;
+		transition: transform 0.3s ease;
+	}
+
+	.gallery-item:hover {
+		transform: scale(1.02);
+	}
+
+	.gallery-item.large {
+		grid-row: span 2;
+	}
+
+	.gallery-item img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.3s ease;
+	}
+
+	.gallery-item:hover img {
+		transform: scale(1.1);
+	}
+
+	.gallery-overlay {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+		color: var(--white);
+		padding: 2rem 1.5rem 1.5rem;
+		transform: translateY(100%);
+		transition: transform 0.3s ease;
+	}
+
+	.gallery-item:hover .gallery-overlay {
+		transform: translateY(0);
+	}
+
+	.gallery-overlay h3 {
+		font-size: 1.25rem;
+		margin-bottom: 0.5rem;
+		font-weight: 600;
+	}
+
+	.gallery-overlay p {
+		font-size: 0.9rem;
+		opacity: 0.9;
+	}
+
+	@media (max-width: 768px) {
+		.gallery-grid {
+			grid-template-columns: 1fr;
+			grid-auto-rows: 200px;
+		}
+
+		.gallery-item.large {
+			grid-row: span 1;
+		}
+
+		.section-title {
+			font-size: 2rem;
+		}
+
+		.gallery-overlay {
+			transform: translateY(0);
+			background: rgba(0, 0, 0, 0.6);
+			padding: 1rem;
+		}
+	}
+</style>

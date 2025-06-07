@@ -1,0 +1,160 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Restaurant familial depuis 1979 au bord du lac de Bret à Puidoux. Cuisine de saison généreuse dans un cadre enchanteur." />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<slot />
+		<script>
+			// Smooth scrolling for navigation links
+			document.addEventListener('DOMContentLoaded', function() {
+				const navLinks = document.querySelectorAll('a[href^="#"]');
+				navLinks.forEach(link => {
+					link.addEventListener('click', function(e) {
+						e.preventDefault();
+						const targetId = this.getAttribute('href').substring(1);
+						const targetElement = document.getElementById(targetId);
+						if (targetElement) {
+							targetElement.scrollIntoView({
+								behavior: 'smooth',
+								block: 'start'
+							});
+						}
+					});
+				});
+
+				// Mobile menu toggle
+				const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+				const mobileMenu = document.getElementById('mobile-menu');
+				
+				if (mobileMenuBtn && mobileMenu) {
+					mobileMenuBtn.addEventListener('click', function() {
+						mobileMenu.classList.toggle('hidden');
+					});
+				}
+
+				// Close mobile menu when clicking on a link
+				const mobileNavLinks = document.querySelectorAll('#mobile-menu a');
+				mobileNavLinks.forEach(link => {
+					link.addEventListener('click', function() {
+						mobileMenu?.classList.add('hidden');
+					});
+				});
+			});
+		</script>
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--primary-green: #7fb069;
+		--secondary-beige: #f5f1eb;
+		--accent-green: #629749;
+		--text-dark: #2d3748;
+		--text-light: #4a5568;
+		--white: #ffffff;
+		--shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+		--shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		font-family: 'Inter', sans-serif;
+		line-height: 1.6;
+		color: var(--text-dark);
+		background-color: var(--white);
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'Playfair Display', serif;
+		font-weight: 600;
+		line-height: 1.2;
+		margin-bottom: 1rem;
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 1rem;
+	}
+
+	.btn {
+		display: inline-block;
+		padding: 0.75rem 2rem;
+		border-radius: 0.5rem;
+		text-decoration: none;
+		font-weight: 500;
+		transition: all 0.3s ease;
+		cursor: pointer;
+		border: 2px solid transparent;
+		text-align: center;
+	}
+
+	.btn-primary {
+		background-color: var(--primary-green);
+		color: var(--white);
+		border-color: var(--primary-green);
+	}
+
+	.btn-primary:hover {
+		background-color: var(--accent-green);
+		border-color: var(--accent-green);
+		transform: translateY(-2px);
+		box-shadow: var(--shadow-lg);
+	}
+
+	.btn-secondary {
+		background-color: rgba(255, 255, 255, 0.9);
+		color: var(--text-dark);
+		border-color: rgba(255, 255, 255, 0.9);
+		backdrop-filter: blur(10px);
+		font-weight: 600;
+	}
+
+	.btn-secondary:hover {
+		background-color: var(--white);
+		color: var(--primary-green);
+		border-color: var(--white);
+		transform: translateY(-2px);
+		box-shadow: var(--shadow-lg);
+	}
+
+	.section {
+		padding: 5rem 0;
+	}
+
+	@media (max-width: 768px) {
+		.section {
+			padding: 3rem 0;
+		}
+		
+		.container {
+			padding: 0 1.5rem;
+		}
+	}
+</style>
